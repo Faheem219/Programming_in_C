@@ -16,4 +16,3 @@ int main(){
         printf("%d ", A[i]);
     }
 }
-
