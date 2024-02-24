@@ -30,17 +30,6 @@ void Sort(int arr[], int size){
     }
 }
 
-void Sort1(int arr[], int size){
-    int max=arr[0];
-    int max_i=0;
-    for(int j=0;j<size;j++){
-        for(int i=j;i<size-j;i++){
-            if(arr[i]>max){ max=arr[i]; max_i=i;}
-        }
-        if(arr[size-1-j]!=max) swap(&arr[max_i],&arr[size-1-j]);
-    }
-}
-
 int main(){
     int size,*arr,x;
     printf("\nEnter the size of the array: ");
