@@ -16,15 +16,47 @@ int BinarySearch(int arr[], int length, int x){
     return -1;
 }
 
+void swap(int *a, int *b){
+    int temp=*a;
+    *a=*b;
+    *b=temp;
+}
+
+void Sort(int arr[], int size){
+    for(int i=0;i<size-1;i++){
+        for(int j=0;j<size-i-1;j++){
+            if(arr[j]>arr[j+1]) swap(&arr[j],&arr[j+1]);
+        }
+    }
+}
+
+void Sort1(int arr[], int size){
+    int max=arr[0];
+    int max_i=0;
+    for(int j=0;j<size;j++){
+        for(int i=j;i<size-j;i++){
+            if(arr[i]>max){ max=arr[i]; max_i=i;}
+        }
+        if(arr[size-1-j]!=max) swap(&arr[max_i],&arr[size-1-j]);
+    }
+}
+
 int main(){
     int size,*arr,x;
     printf("\nEnter the size of the array: ");
     scanf("%d", &size);
     arr = (int *)malloc(size * sizeof(int));
-    printf("\nEnter the elements of the array (sorted): ");
+    printf("\nEnter the elements of the array: ");
     for (int i=0; i<size; i++){
         scanf("%d", &arr[i]);
     }
+
+    Sort(arr, size);
+    printf("\nAfter Sorting:");
+    for (int i=0; i<size; i++){
+        printf("%d ", arr[i]);
+    }
+
     printf("\nEnter the element to search: ");
     scanf("%d", &x);
     int result = BinarySearch(arr, size, x);
