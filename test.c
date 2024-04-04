@@ -1,38 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-void swap(int *a, int *b){
-    int temp=*a;
-    *a=*b;
-    *b=temp;
-}
-
-void Sort1(int arr[], int size){
-    int max=arr[0];
-    int max_i=0;
-    for(int j=0;j<size;j++){
-        for(int i=0;i<size-j;i++){
-            if(arr[i]>max){ max=arr[i]; max_i=i;}
-        }
-        if(arr[size-1-j]!=max) swap(&arr[max_i],&arr[size-1-j]);
-    }
-}
-
+#include <string.h>
 int main(){
-    int size,*arr,x;
-    printf("\nEnter the size of the array: ");
-    scanf("%d", &size);
-    arr = (int *)malloc(size * sizeof(int));
-    printf("\nEnter the elements of the array: ");
-    for (int i=0; i<size; i++){
-        scanf("%d", &arr[i]);
-    }
-
-    Sort1(arr, size);
-    printf("\nAfter Sorting:");
-    for (int i=0; i<size; i++){
-        printf("%d ", arr[i]);
-    }
+    char c1[10],c2;
+    char c4[4]={'R','u','t','\0'};
+    char bkl="Sani BKL",c20=" lol ";
+    //printf("\n%s\n",c4);
+    //scanf("%[^\n]s",c1);
+    //printf("\n%s\n",c1);   
+    //fgets(c1,6,stdin);
+    //puts(c1);
+    printf("%s",strcat(bkl,c20));
     return 0;
 }
-
