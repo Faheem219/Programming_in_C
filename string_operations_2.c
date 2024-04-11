@@ -61,3 +61,5 @@ int main(){
     Substring(s2,sub)?printf("\nContains Substring.\n"):printf("\nDoes not contain substring.\n");
     return 0;
 }
+
+
