@@ -56,7 +56,7 @@ int main(){
     Longer(s1,s2)?printf("\n1st String is Longer.\n"):printf("\n2nd String is Longer.\n");
     Concatenate(s1,s2);
     printf("\nConcatenated string: %s\n",s1);
-    printf("\nEnter substring to check in string 2:");
+    printf("\nEnter substring to check in string 2: ");
     scanf("%[^\n]s",sub);
     Substring(s2,sub)?printf("\nContains Substring.\n"):printf("\nDoes not contain substring.\n");
     return 0;
