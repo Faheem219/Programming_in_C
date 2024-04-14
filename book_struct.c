@@ -14,6 +14,7 @@ struct Book {
     float fine;
 };
 
+// Assuming return date to be 1 month after issue date
 void Fine(struct Book *b) {
     int days=0;
     b->fine = 0;
@@ -54,7 +55,7 @@ void Display(struct Book b){
     printf("\nAuthor Name: %s", b.auth_name);
     printf("\nIssuing Date: %d/%d/%d", b.issue.dd, b.issue.mm, b.issue.yy);
     printf("\nReturn Date: %d/%d/%d", b.rtrn.dd, b.rtrn.mm, b.rtrn.yy);
-    printf("\nFine: %f\n", b.fine);
+    printf("\nFine: \u20B9%.2f\n", b.fine);
 }
 
 int main() {
