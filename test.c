@@ -1,12 +1,22 @@
 #include <stdio.h>
 
-struct Test{
-    int x;
-    char h;
-}t1;
+void Display(int arr[],int n){
+    printf("\nElements of the array are:\n");
+    for(int i=0;i<n;i++){
+        printf("%d ",arr[i]);
+    }
+    printf("\n");
+}
 
 int main(){
-    struct Test t2;
-    printf("\n %d %c %d %c",t1.x,t1.h,t2.x,t2.h);
+    int A[7];
+    printf("\nDefault Initialization:\n");
+    Display(A,7);
+    printf("\nEnter the elements of the array:\n");
+    for(int i=0;i<7;i++){
+        scanf("%d",&A[i]);
+    }
+    Display(A,7);
     return 0;
 }
+

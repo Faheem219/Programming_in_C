@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 struct Salary {
     float basic;
@@ -56,12 +57,16 @@ int main() {
     int n;
     printf("\nEnter the number of entries: ");
     scanf("%d",&n);
-    struct Employee emp[n];
+
+    struct Employee *emp;
+    emp=(struct Employee *)malloc(n*sizeof(struct Employee));
+    
     for(int i=0;i<n;i++){
         printf("\nEntry %d:\n",i + 1);
         Insert(&emp[i]);
     }
     Display(emp,n);
+    free(emp);
     return 0;
 }
 
