@@ -21,14 +21,14 @@ int main(){
     printf("\nPlease enter the size of the array: ");
     scanf("%d",&n1);
 
-    p1=malloc(n1*sizeof(int));
+    p1=(int *)malloc(n1*sizeof(int));
     printf("\n--------------------MALLOC--------------------\n");
     printf("\nDefault Initialization:\n");
     Display(p1,n1);
     Insert(p1,n1);
     Display(p1,n1);
 
-    p2=calloc(n1,n1*sizeof(int));
+    p2=calloc(3,n1*sizeof(int));
     printf("\n--------------------CALLOC--------------------\n");
     printf("\nDefault Initialization:\n");
     Display(p2,n1);

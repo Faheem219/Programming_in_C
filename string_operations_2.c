@@ -28,18 +28,13 @@ void Concatenate(char s1[50], char s2[50]){
     }
 }
 
-int Substring(char s1[50], char sub[50]){
-    for(int i=0;i<length(s1);i++){
-        for(int i=0;i<=length(s1)-length(sub);i++){
-            int j;
-            for(j=0;j<length(sub);j++){
-                if(s1[i+j]!=sub[j]){
-                    break;
-                }
-            }
-            if(j==length(sub)) return 1;
+int Substring(char str[100],char sub[100]){
+    for(int i=0;i<length(str);i++){
+        int j;
+        for(j=0;j<length(sub);j++){
+            if(str[i+j]!=sub[j]) break;
         }
-        return 0;
+        if(j==length(sub)) return 1;
     }
     return 0;
 }
