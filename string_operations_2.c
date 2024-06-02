@@ -26,6 +26,7 @@ void Concatenate(char s1[50], char s2[50]){
     for(int i=l1,j=0;i<l1+l2 && j<l2;i++,j++){
         s1[i]=s2[j];
     }
+    s1[l1+l2]='\0';
 }
 
 int Substring(char str[100],char sub[100]){

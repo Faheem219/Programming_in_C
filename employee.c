@@ -40,7 +40,7 @@ void Insert(struct Employee *e) {
     Calculate(e);
 }
 
-void Display(struct Employee e[], int size) {
+void Display(struct Employee *e, int size) {
     printf("\n\
 ------------------------------------------------------------------------------------------------\n\
     ID      Name        Designation           Gross         Basic        Allowance       Tax\n\
