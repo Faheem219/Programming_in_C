@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int length(char str[50]){
     int count=0;
     for(;str[count]!=0;count++);
@@ -40,22 +38,35 @@ int Substring(char str[100],char sub[100]){
     return 0;
 }
 
-// int main(){
-//     char s1[50], s2[50],sub[50];
-//     printf("\nEnter 1st string: ");
-//     scanf("%[^\n]s",s1);
-//     getchar(); // Consume the newline character
-//     printf("\nEnter 2nd string: ");
-//     scanf("%[^\n]s",s2);
-//     getchar();
-//     Compare(s1,s2)?printf("\nStrings are equal.\n"):printf("\nStrings are not equal.\n");
-//     Longer(s1,s2)?printf("\n1st String is Longer.\n"):printf("\n2nd String is Longer.\n");
-//     Concatenate(s1,s2);
-//     printf("\nConcatenated string: %s\n",s1);
-//     printf("\nEnter substring to check in string 2: ");
-//     scanf("%[^\n]s",sub);
-//     Substring(s2,sub)?printf("\nContains Substring.\n"):printf("\nDoes not contain substring.\n");
-//     return 0;
-// }
+void Upper(char str[50]){
+    for(int i=0;i<length(str);i++){
+        if(str[i]>=97 && str[i]<=122){
+            str[i]-=32;
+        }
+    }
+}
 
+int char_len(char str[50]){
+    int count=0;
+    for(int i=0;str[i]!=0;i++){
+        if((str[i]>=65 && str[i]<=90) || (str[i]>=97 && str[i]<=122)) count++;
+    }
+    return count;
+}
 
+int vow_len(char str[50]){
+    int count=0;
+    Upper(str);
+    for(int i=0;str[i]!=0;i++){
+        if(str[i]=='A' || str[i]=='E' || str[i]=='I' || str[i]=='O' || str[i]=='U') count++;
+    }
+    return count;
+}
+
+void Copy(char str1[50],char str2[50]){
+    for(int i=0;i<length(str1);i++) str1[i]=0;
+    for(int i=0;i<length(str2);i++){
+        str1[i]=str2[i];
+    str1[length(str2)] = '\0';
+    }
+}

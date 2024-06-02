@@ -1,17 +1,14 @@
 #include <stdio.h>
-
-void swap(int *a, int *b){
-	int temp=*a;
-	*a=*b;
-	*b=temp;
-}
+#include <string.h>
+// #include "string_operations_2.c"
+#include "string_operations.h"
 
 int main(){
-	int arr[5]={1,2,3,4,5};
-	swap(arr[0],arr[1]);
-	printf("\nElements:\n");
-	for(int i=0;i<n;i++){
-		printf("%d",arr[i]);
-	}
-	return 0;
+	char string1 [] = "Jerry" ;
+char string2[] = "Ferry" ;
+int i, j, k ;
+i = strcmp ( string1, "Jerry");
+j= strcmp (string1, string2 ) ;
+k = strcmp ( string1, "Jerry boy" ) ;
+printf ("n%d %d %d", i, j, k) ;
 }
