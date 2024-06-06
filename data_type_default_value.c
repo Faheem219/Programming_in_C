@@ -2,9 +2,10 @@
 //lol this is a test
 int main() {
     // Default values of data types
-    int i;
+    int i=0;
     float f;
     double d;
+    long double ld;
     char c;
     unsigned int ui;
     long int li;
@@ -15,9 +16,10 @@ int main() {
     unsigned long long int ulli;
     short s;
 
-    printf("Default value of int: %d\n", i);
+    printf("Default value of int: %x\n", &i);
     printf("Default value of float: %f\n", f);
     printf("Default value of double: %lf\n", d);
+    printf("Default value of long double: %Lf\n", ld);
     printf("Default value of char: %c\n", c);
     printf("Default value of unsigned int: %u\n", ui);
     printf("Default value of long int: %ld\n", li);
